@@ -11,6 +11,7 @@
 	<groupId>com.wipro</groupId>
 	<artifactId>Spring-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>Spring-app</name>
 	<description>Demo project for Spring Boot</description>
 
