@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Currency Convertor</title>
+<style type=text/css>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #DD4C11;
+   color: white;
+   text-align: center;
+}
+.header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color: #DD4C11;
+   color: white;
+   text-align: center;
+}
+input[name="num"] ,input[type="select"]{
+  width: 90%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type="submit"],input[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 40%;
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover, input[type="button"]:hover {
+  opacity: 0.6;
+}
+div {
+	align: center;
+}
+.cur {
+  color: white;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}   
+select
+{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+   <div>
+   <div class="header">
+  <p>Currency Convertor</p>
+</div>
+<div class="cur">
+	<form action ="check" >
+			<table>
+            <tr>
+<td align="center"><input type="number" default=1 size=25  placeholder="Enter Amount.." name="num" required/></td>
+<td> <select name  ="Currency">
+<option selected>select</option>
+            <option> Dollar</option>
+			
+			<option> Euro </option>
+			<option> Riyal </option>
+			</select> </td>
+				
+				<td align="center"><input type="submit"  value="check" name="bookButton"  ></td></tr>
+			</table>
+			<br>
+	</form>
+    </div>
+    <div class="footer">
+<p>know the curency value</p>
+</div>
+</div>
+</body>
+</html>
