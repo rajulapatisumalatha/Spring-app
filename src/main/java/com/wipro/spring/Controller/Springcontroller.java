@@ -15,7 +15,7 @@ import com.wipro.spring.Bean.Bean;
 public class Springcontroller {
 	@Autowired(required=true)
 	Bean b;
-	@RequestMapping("/")
+	@RequestMapping("/currencyconvertor")
 	public String employee() {
 		return "index.html";
 	}
