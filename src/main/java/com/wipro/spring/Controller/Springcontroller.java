@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.wipro.spring.Bean.Bean;
 
 @Controller
+@CrossOrigin(origins="http://18.218.54.169:8080/")
 public class Springcontroller {
 	@Autowired(required=true)
 	Bean b;
