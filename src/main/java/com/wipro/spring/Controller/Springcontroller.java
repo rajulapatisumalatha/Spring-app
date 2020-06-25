@@ -17,7 +17,7 @@ import com.wipro.spring.Bean.Bean;
 public class Springcontroller {
 	@Autowired(required=true)
 	Bean b;
-	@RequestMapping("/")
+	@RequestMapping("/cur")
 	public String employee() {
 		return "index.html";
 	}
