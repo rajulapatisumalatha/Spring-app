@@ -23,12 +23,7 @@ public class Springcontroller {
 	}
 	
 	@RequestMapping(path="/check")
-	public String currency(@RequestParam(required = true) String num,
-            @RequestParam(required = true) String Currency,Model model) {
-		
-		
-	int n=Integer.parseInt(num);
-	String Curr=Currency.toString();
+	public String currency(@RequestParam(required = true) String num,@RequestParam(required = true) String Currency,Model model) {	
 	int n=Integer.parseInt(num);
 	String Curr=Currency.toString();
 		float res=0;
