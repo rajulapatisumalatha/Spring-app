@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import com.wipro.spring.dao.bean;
 import com.wipro.spring.Bean.Bean;
 
 @Controller
@@ -29,25 +29,13 @@ public class Springcontroller {
 		
 	int n=Integer.parseInt(num);
 	String Curr=Currency.toString();
-	//Bean b=new Bean();
+	int n=Integer.parseInt(num);
+	String Curr=Currency.toString();
 		float res=0;
-		if(Curr.equalsIgnoreCase("Dollar"))
-		{
-			res=71*n;
-			
-		}else if(Curr.equalsIgnoreCase("Euro"))
-		{
-			res=78*n;
-			
-		}else if(Curr.equalsIgnoreCase("Riyal"))
-		{
-			res=18*n;
-		}
-	
-	//System.out.print(b.getRes());
-	
+		bean b=new bean(Curr,n);
+		b.curr();
+	res=b.getRes();
 	model.addAttribute("cur", res);
-		
 		return "index1.html";
 	}
 
