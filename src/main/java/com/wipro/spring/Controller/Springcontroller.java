@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.wipro.spring.dao.bean;
-import com.wipro.spring.Bean.Bean;
+
+import com.wipro.spring.Bean.bean;
 
 @Controller
 @CrossOrigin(origins="http://3.15.212.114:8080/")
