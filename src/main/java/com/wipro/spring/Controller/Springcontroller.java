@@ -16,7 +16,7 @@ import com.wipro.spring.Bean.bean;
 @CrossOrigin(origins="http://3.15.212.114:8080/")
 public class Springcontroller {
 	@Autowired(required=true)
-	Bean b;
+	bean b;
 	@RequestMapping("/cur")
 	public String employee() {
 		return "index.html";
