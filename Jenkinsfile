@@ -29,7 +29,7 @@ pipeline {
               }*/
     stage('Uploading artifacts to Ansible'){
             steps{
- withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'pass', usernameVariable: 'userId')]) {
+ withCredentials([usernamePassword(credentialsId: 'docker1', passwordVariable: 'pass', usernameVariable: 'userId')]) {
                               sh 'sshpass -p ${pass} scp -o StrictHostKeyChecking=no target/*.war  revathi@172.31.18.28:~/target/'
 
             }
