@@ -36,12 +36,22 @@ pipeline {
             }
 }
     }
+         stage('Run Dockerfile'){
+            steps{
+ withCredentials([usernamePassword(credentialsId: 'docker1', passwordVariable: 'pass', usernameVariable: 'userId')]) {
+    
+                           
+    sh 'sshpass -p ${pass} ssh -v -o StrictHostKeyChecking=no revathi@172.31.18.28  \"docker build -t docker .\"'
+
+            }
+}
+    }
          stage('Deploy into docker'){
             steps{
  withCredentials([usernamePassword(credentialsId: 'docker1', passwordVariable: 'pass', usernameVariable: 'userId')]) {
     
                            
-    sh 'sshpass -p ${pass} ssh -v -o StrictHostKeyChecking=no revathi@172.31.18.28  \"docker ps\"'
+    sh 'sshpass -p ${pass} ssh -v -o StrictHostKeyChecking=no revathi@172.31.18.28  \"docker run -itd  -p 8080:8080  docker:latest\"'
 
             }
 }
