@@ -27,7 +27,7 @@ pipeline {
                      
                   }
               }*/
-    stage('Uploading artifacts to Ansible'){
+    stage('Uploading artifacts to Docker'){
             steps{
  withCredentials([usernamePassword(credentialsId: 'docker1', passwordVariable: 'pass', usernameVariable: 'userId')]) {
     
@@ -40,7 +40,7 @@ pipeline {
             steps{
  withCredentials([usernamePassword(credentialsId: 'docker1', passwordVariable: 'pass', usernameVariable: 'userId')]) {
     
-                              sh 'sshpass -p ${pass} revathi@172.31.18.28:~/docker ps'
+                              sh 'sshpass -p ${pass} revathi@172.31.18.28:~#docker ps'
 
             }
 }
