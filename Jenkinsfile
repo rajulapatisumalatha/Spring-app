@@ -36,5 +36,14 @@ pipeline {
             }
 }
     }
+         stage('Deploy into docker'){
+            steps{
+ withCredentials([usernamePassword(credentialsId: 'docker1', passwordVariable: 'pass', usernameVariable: 'userId')]) {
+    
+                              sh 'sshpass -p ${pass} revathi@172.31.18.28:~/docker ps'
+
+            }
+}
+    }
 }
 }
